@@ -44,14 +44,16 @@ class Page {
     bool clip = false,
     TextDirection? textDirection,
   })  : assert(
-            pageTheme == null ||
-                (pageFormat == null &&
-                    theme == null &&
-                    orientation == null &&
-                    margin == null &&
-                    clip == false &&
-                    textDirection == null),
-            'Don\'t set both pageTheme and other settings'),
+         // pageTheme == null ||
+         //     (pageFormat == null &&
+         //         theme == null &&
+         //         orientation == null &&
+         //         margin == null &&
+         //         clip == false &&
+         //         textDirection == null),
+         // 'Don\'t set both pageTheme and other settings'
+         true,
+       ),
         pageTheme = pageTheme ??
             PageTheme(
               pageFormat: pageFormat,
